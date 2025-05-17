@@ -33,14 +33,20 @@ npm run dev
 ```
 Your React app will now be running locally at http://localhost:5173
 
-## 🛠️ Tool Summary
+## 🛠️ JavaScript Libraries & Frameworks Comparison
 
-| Tool     | Type       | Description                                                                 |
-|----------|------------|-----------------------------------------------------------------------------|
-| **React**    | Library    | Build UI with components. Very flexible and widely used. Needs routing/tools added separately. |
-| **Angular**  | Framework  | Full-featured, built-in routing, forms, and HTTP. Uses TypeScript heavily. Opinionated structure. |
-| **Vue**      | Framework  | Lightweight and beginner-friendly. Combines React-like components with built-in features.         |
-| **Svelte**   | Compiler   | Compiles components to pure JavaScript. No virtual DOM. Smaller and faster apps.                  |
-| **Next.js**  | Framework  | React-based with routing, server-side rendering (SSR), and static site generation. SEO-friendly.  |
-| **Astro**    | Framework  | Focused on content sites. Zero JS by default. Supports React, Vue, Svelte in the same project.     |
-| **Qwik**     | Framework  | Ultra-fast with "resumability" — apps load instantly. Focuses on performance optimization.         |
+| Tool        | Year  | Type       | Description                                                   |
+|-------------|-------|------------|---------------------------------------------------------------|
+| **jQuery**      | 2006  | Library     | DOM manipulation, simple API. Outdated by modern standards.      |
+| **AngularJS**   | 2010  | Framework   | Google's first frontend framework. Replaced by Angular (2+).    |
+| **Ember.js**    | 2010  | Framework   | Convention-over-configuration. Full-featured, opinionated.      |
+| **Backbone.js** | 2010  | Framework   | Lightweight MVC. Popular before React/Vue.                      |
+| **React**       | 2013  | Library     | Component-based UI library. Extremely popular and flexible.     |
+| **Angular**     | 2013  | Framework   | Full-featured, TypeScript-based. Steep learning curve.          |
+| **Vue.js**      | 2013  | Framework   | Progressive, easy to learn, combines React & Angular features.  |
+| **Svelte**      | 2016  | Compiler    | No virtual DOM. Compiles components into fast vanilla JS.       |
+| **Next.js**     | 2016  | Framework   | React-based SSR/SSG framework. Ideal for SEO and performance.   |
+| **Remix**       | 2020+ | Framework   | React framework focused on performance & data handling.         |
+| **Solid**       | 2020+ | Library     | React-like syntax with better performance and reactivity.       |
+| **Astro**       | 2020+ | Framework   | Ships 0 JS by default. Supports multiple frameworks.            |
+| **Qwik**        | 2020+ | Framework   | Ultra-fast. Uses resumable JavaScript to load instantly.        |

@@ -1,7 +1,7 @@
 {
   "name": "first-react",
   "private": true,
-  "homepage": "https://zhangxijing97.github.io/static-pages",
+  "homepage": "https://zhangxijing97.github.io/scrimba-react-course/static-pages",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

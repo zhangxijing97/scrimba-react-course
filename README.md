@@ -1,5 +1,84 @@
 # scrimba-react-course
 
+# Deploying React Project (`react-facts`) to GitHub Pages (Inside Monorepo)
+
+This guide helps you deploy a React project located inside a subfolder (like `/react-facts`) of your main GitHub repository.
+
+---
+
+## ✅ Steps
+
+### 🔧 Step 1: Edit `vite.config.js`
+
+```js
+// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  base: '/scrimba-react-course/react-facts/',  // 👈 important for GitHub Pages
+  plugins: [react()]
+})
+```
+
+---
+
+### 📦 Step 2: Edit `package.json`
+
+Add the following inside your `react-facts/package.json`:
+
+```json
+{
+  "homepage": "https://zhangxijing97.github.io/scrimba-react-course/react-facts",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+---
+
+### 📥 Step 3: Install `gh-pages`
+
+```bash
+cd scrimba-react-course/react-facts
+npm install --save-dev gh-pages
+```
+
+---
+
+### 🚀 Step 4: Deploy the Project
+
+```bash
+npm run deploy
+```
+
+This will:
+- Build the project into `dist/`
+- Push `dist/` to the `gh-pages` branch
+- GitHub will serve from this branch
+
+---
+
+## ✅ Final URL
+
+Your project will be live at:
+
+```
+https://zhangxijing97.github.io/scrimba-react-course/react-facts/
+```
+
+---
+
+## ⚙️ GitHub Pages Settings
+
+Make sure:
+- Pages Source: `gh-pages` branch
+- Directory: `/ (root)`
+
+---
+
 ## 📦 What is Node.js?
 
 **Node.js** lets you run JavaScript on your computer, not just in the browser.  
@@ -11,6 +90,40 @@ It helps you build websites, run tools, and create servers using JavaScript.
 
 **npm** stands for **Node Package Manager**.  
 It helps you **install and manage tools or libraries** (like React) in your project.
+
+---
+
+## 📁 What is `node_modules/`?
+
+This folder contains all the code packages downloaded using `npm install`.  
+You don’t need to push it to GitHub — just keep `package.json` and `package-lock.json`.
+
+---
+
+## 🛠️ What is `package.json` vs `package-lock.json`?
+
+- `package.json`: Lists the packages you want in your project.
+- `package-lock.json`: Freezes the exact version installed to avoid bugs due to updates.
+
+---
+
+## ⚙️ What is `vite.config.js`?
+
+This is the config file for Vite. It tells Vite how to build and serve your app.  
+`base: '/repo/project/'` is important when hosting subfolder projects on GitHub Pages.
+
+---
+
+## 🧠 React Key Concepts (from your learning)
+
+- **Props**: Pass info from parent to child component. Like attributes.
+- **State**: Data that changes over time, stored inside a component.
+- **useState**: Hook that lets a component have state.
+- **.map()**: Used to render lists dynamically in JSX.
+- **Event Handling**: You use functions like `onClick={handleClick}` to update state.
+- **Conditional Rendering**: `isShown && <p>text</p>` or `isShown ? <p>text</p> : null`.
+
+---
 
 ## 🚀 How to Set Up This Project with Vite
 
@@ -25,15 +138,19 @@ Follow the prompts:
 - Select a framework: React
 - Select a variant: JavaScript
 
-Next Steps
+Next Steps:
+
 ```bash
 cd first-react
 npm install
 npm run dev
 ```
+
 Your React app will now be running locally at http://localhost:5173
 
-## 🛠️ JavaScript Libraries & Frameworks Comparison
+---
+
+## 📚 JavaScript Libraries & Frameworks Comparison
 
 | Tool        | Year  | Type       | Description                                                   |
 |-------------|-------|------------|---------------------------------------------------------------|

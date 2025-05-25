@@ -52,7 +52,7 @@ This is the config file for Vite. It tells Vite how to build and serve your app.
 - **Event Handling**: You use functions like `onClick={handleClick}` to update state.
 - **Conditional Rendering**: `isShown && <p>text</p>` or `isShown ? <p>text</p> : null`.
 
-## Deploying React Project to GitHub Pages (Inside Monorepo)
+## Deploying React Project to GitHub Pages
 
 This guide helps you deploy a React project located inside a subfolder of your GitHub repository.
 
